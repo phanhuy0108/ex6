@@ -8,25 +8,27 @@ namespace ConsoleApplication1
 {
     public class Stack
     {
-        private int[] Buffer;
+        private string [] Buffer;
         private int Top;
-        public Stack(int size)
+        public Stack()
         {
-            Buffer = new int[size];
+            Buffer = new string [1000];
             Top = -1;
         }
-        public void Push (int v)
+
+        
+        public void Push (string v)
         {
             Buffer[Top + 1]=v;
             Top++;
         }
-        public int Pop()
+        public string Pop()
         {
-            int n = Buffer[Top];
+            string n = Buffer[Top];
             Top--;
             return n;
         }
-        public int Peek()
+        public string Peek()
         {
           return Buffer[Top];
         }
